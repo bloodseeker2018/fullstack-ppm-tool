@@ -12,6 +12,9 @@ class Register extends Component {
         this.state = {
             username: "",
             fullname: "",
+            studentId:"",
+            address:"",
+            phoneNumber:"",
             password: "",
             confirmPassword: "",
             errors: {}
@@ -40,6 +43,9 @@ class Register extends Component {
         const newUser = {
             username: this.state.username,
             fullname: this.state.fullname,
+            studentId: this.state.studentId,
+            address: this.state.address,
+            phoneNumber: this.state.phoneNumber,
             password: this.state.password,
             confirmPassword: this.state.confirmPassword
         }
@@ -82,7 +88,33 @@ class Register extends Component {
                                     {errors.username && (
                                         <div className="invalid-feedback">{errors.username}</div>
                                     )}
-
+                                </div>
+                                <div className="form-group">
+                                    <input type="text" className={classnames("form-control form-control-lg", {
+                                        "is-invalid": errors.studentId
+                                    })} placeholder="Student Id" name="studentId"
+                                        value={this.state.studentId} onChange={this.onChange} />
+                                    {errors.fullname && (
+                                        <div className="invalid-feedback">{errors.studentId}</div>
+                                    )}
+                                </div>
+                                <div className="form-group">
+                                    <input type="text" className={classnames("form-control form-control-lg", {
+                                        "is-invalid": errors.address
+                                    })} placeholder="Address" name="address"
+                                        value={this.state.address} onChange={this.onChange} />
+                                    {errors.fullname && (
+                                        <div className="invalid-feedback">{errors.address}</div>
+                                    )}
+                                </div>
+                                <div className="form-group">
+                                    <input type="text" className={classnames("form-control form-control-lg", {
+                                        "is-invalid": errors.phoneNumber
+                                    })} placeholder="Phone Number" name="phoneNumber"
+                                        value={this.state.phoneNumber} onChange={this.onChange} />
+                                    {errors.fullname && (
+                                        <div className="invalid-feedback">{errors.phoneNumber}</div>
+                                    )}
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className={classnames("form-control form-control-lg", {

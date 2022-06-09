@@ -33,6 +33,9 @@ public class JwtTokenProvider {
         claims.put("id", (Long.toString(user.getId())));
         claims.put("username", user.getUsername());
         claims.put("fullname", user.getFullname());
+        claims.put("studentId", user.getStudentId());
+        claims.put("address", user.getAddress());
+        claims.put("phoneNumber", user.getPhoneNumber());
 
         return Jwts.builder()
                 .setSubject(userId)

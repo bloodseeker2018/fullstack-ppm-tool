@@ -27,6 +27,15 @@ public class User implements UserDetails {
     @NotBlank(message = "Please enter your full name")
     private String fullname;
 
+    @NotBlank(message = "Please enter your student Id")
+    private String studentId;
+
+    @NotBlank(message = "Please enter your address")
+    private String address;
+
+    @NotBlank(message = "Please enter your phone number")
+    private String phoneNumber;
+
     @NotBlank(message = "Password field is required")
     private String password;
 
@@ -72,6 +81,30 @@ public class User implements UserDetails {
 
     public void setFullname(String fullname) {
         this.fullname = fullname;
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getPassword() {
